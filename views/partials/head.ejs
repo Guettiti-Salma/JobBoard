@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- CSS -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://preview.uideck.com/items/thehunt/assets/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="/css/main.css">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" href="/css/line-icons.css">
+	<link rel="stylesheet" href="/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/css/owl.theme.default.css">
+	<link rel="stylesheet" href="/css/slicknav.min.css">
+	<link rel="stylesheet" href="/css/animate.css">
+	<link rel="stylesheet" href="/css/responsive.css">
+	<link rel="stylesheet" href="/css/style.css">
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="/js/jquery-min.js" type="129a04a2926df9d891dc2e29-text/javascript"></script>
+	<script src="/js/popper.min.js" type="129a04a2926df9d891dc2e29-text/javascript"></script>
+	<script src="/js/bootstrap.min.js" type="129a04a2926df9d891dc2e29-text/javascript"></script>
+	<script src="/js/color-switcher.js" type="129a04a2926df9d891dc2e29-text/javascript"></script>
+	<script src="/js/owl.carousel.min.js" type="129a04a2926df9d891dc2e29-text/javascript"></script>
+	<script src="/js/jquery.slicknav.js" type="129a04a2926df9d891dc2e29-text/javascript"></script>
+	<script src="/js/jquery.counterup.min.js" type="129a04a2926df9d891dc2e29-text/javascript"></script>
+	<script src="/js/waypoints.min.js" type="129a04a2926df9d891dc2e29-text/javascript"></script>
+	<script src="/js/form-validator.min.js" type="129a04a2926df9d891dc2e29-text/javascript"></script>
+	<script src="/js/contact-form-script.js" type="129a04a2926df9d891dc2e29-text/javascript"></script>
+	<script src="/js/main.js" type="129a04a2926df9d891dc2e29-text/javascript"></script>
+	<script src="/js/rocket-loader.min.js" data-cf-settings="129a04a2926df9d891dc2e29-|49" defer="">
+	</script>
+
+
+	<title>Find Job</title>
+
+
+</head>
+<body>
+
+<header id="home" class="hero-area">
+
+	<nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
+		<div class="container">
+			<div class="theme-header clearfix">
+
+				<div class="navbar-header">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+						<span class="lni-menu"></span>
+						<span class="lni-menu"></span>
+						<span class="lni-menu"></span>
+					</button>
+					<a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
+				</div>
+				<div class="collapse navbar-collapse" id="main-navbar">
+					<ul class="navbar-nav mr-auto w-100 justify-content-end">
+						<li class="nav-item dropdown active">
+							<a class="nav-link dropdown-toggle" href="/" aria-haspopup="true" aria-expanded="false">
+								Home
+							</a>
+
+						</li>
+						<%if (user) {%>
+						<% if (user.isAdmin() || user.isCompany()) {%>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="/jobs/list" aria-haspopup="true" aria-expanded="false">
+									Job
+								</a>
+							</li>
+						<%}%>
+
+						<% if (user.isAdmin()) {%>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="/companies/list" aria-haspopup="true" aria-expanded="false">
+									Company
+								</a>
+							</li>
+						<% } }%>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#about"  aria-haspopup="true" aria-expanded="false">
+								About
+							</a>
+
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#contact" aria-haspopup="true" aria-expanded="false">
+								Contact
+							</a>
+
+						</li>
+
+						<% if (user) {%>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<img class="img-circle" style="width: 50px; height: 50px;" src="http://www.clker.com/cliparts/d/L/P/X/z/i/no-image-icon-hi.png" />
+									<%= user.name %>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="/profile"><i class="fa fa-user"></i>My Profile</a></li>
+									<li><a class="dropdown-item" href="/changePassword"><i class="fas fa-edit"></i>Change your password</a></li>
+									<li><a href="/auth/logout" class="dropdown-item"><i class="fa fa-power-off"></i>log Out</a></li>
+								</ul>
+							</li>
+
+						<%} else {%>
+							<li class="button-group">
+								<a href="/auth/login" class="button btn btn-common">log In</a>
+							</li>
+						<%}%>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu" data-logo="assets/img/logo-mobile.png"></div>
+	</nav>
+
+
+</header>

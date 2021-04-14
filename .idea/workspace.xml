@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5688beea-1078-42f8-859c-d6e890c7b2d1" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ProjectId" id="1m3exGPcakNeSFCHQrP8IpxLXBE" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/partials" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\salma\Desktop\TPNodeJs\JobBoard\views\partials" />
+      <recent name="C:\Users\salma\Desktop\TPNodeJs\JobBoard\public\img" />
+      <recent name="C:\Users\salma\Desktop\TPNodeJs\JobBoard\public\css" />
+      <recent name="C:\Users\salma\Desktop\TPNodeJs\JobBoard\views" />
+      <recent name="C:\Users\salma\Desktop\TPNodeJs\JobBoard\config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\salma\Desktop\TPNodeJs\JobBoard\public" />
+      <recent name="C:\Users\salma\Desktop\TPNodeJs\JobBoard\views" />
+      <recent name="C:\Users\salma\Desktop\TPNodeJs\JobBoard" />
+      <recent name="C:\Users\salma\Desktop\TPNodeJs\JobBoard\public\assets" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.index.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5688beea-1078-42f8-859c-d6e890c7b2d1" name="Default Changelist" comment="" />
+      <created>1608726946783</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608726946783</updated>
+      <workItem from="1608726952802" duration="2901000" />
+      <workItem from="1608729886345" duration="15875000" />
+      <workItem from="1608748729757" duration="987000" />
+      <workItem from="1608749756589" duration="2712000" />
+      <workItem from="1608752502050" duration="2358000" />
+      <workItem from="1608760486489" duration="36000" />
+      <workItem from="1608761402241" duration="8690000" />
+      <workItem from="1608806762594" duration="9227000" />
+      <workItem from="1608837695226" duration="19400000" />
+      <workItem from="1608899886454" duration="10679000" />
+      <workItem from="1608935317314" duration="17341000" />
+      <workItem from="1609015852132" duration="9476000" />
+      <workItem from="1609026585585" duration="5764000" />
+      <workItem from="1609365362463" duration="10905000" />
+      <workItem from="1609443931038" duration="1508000" />
+      <workItem from="1609448304438" duration="11052000" />
+      <workItem from="1610226464712" duration="205000" />
+      <workItem from="1610229525606" duration="1977000" />
+      <workItem from="1610241667725" duration="251000" />
+      <workItem from="1610580303272" duration="2889000" />
+      <workItem from="1612955170578" duration="4947000" />
+      <workItem from="1612977957814" duration="2702000" />
+      <workItem from="1614276220597" duration="647000" />
+      <workItem from="1614531482242" duration="8376000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

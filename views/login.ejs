@@ -1,0 +1,162 @@
+<% include ./partials/headLogin.ejs %>
+<title>Find JOB</title>
+
+</head>
+<body>
+
+<header id="home" class="hero-area">
+
+<nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
+<div class="container">
+<div class="theme-header clearfix">
+
+<div class="navbar-header">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+<span class="lni-menu"></span>
+<span class="lni-menu"></span>
+<span class="lni-menu"></span>
+</button>
+<a href="index.html" class="navbar-brand"><img src="" alt=""></a>
+</div>
+<div class="collapse navbar-collapse" id="main-navbar">
+<ul class="navbar-nav mr-auto w-100 justify-content-end">
+
+</li>
+<li class="nav-item active">
+<a class="nav-link" href="/auth/signup">Sign Up</a>
+</li>
+<li class="button-group">
+<a href="/auth/login" class="button btn btn-common">Sign In</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mobile-menu" data-logo="assets/img/logo-mobile.png"></div>
+</nav>
+
+</header>
+
+
+<div class="page-header">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="inner-header">
+<h3>Login</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<section id="content" class="section-padding">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-5 col-md-6 col-xs-12">
+<div class="page-login-form box">
+<h3>
+Login
+</h3>
+<form class="login-form" method="post">
+
+ <% if (message.length > 0) { %>
+  <div class="alert alert-danger"><%= message %></div>
+ <% } %>
+
+<div class="form-group">
+<div class="input-icon">
+ <i class="fa fa-user"></i>
+
+<input type="text" id="email" class="form-control" name="email" placeholder="Username">
+</div>
+</div>
+<div class="form-group">
+<div class="input-icon">
+<i class="material-icons">&#xe897;</i>
+<input type="password" class="form-control" name="password" id="password" placeholder="Password">
+</div>
+</div>
+<div class="form-group form-check">
+<input type="checkbox" class="form-check-input" id="exampleCheck1">
+<label class="form-check-label" for="exampleCheck1">Keep Me Signed In</label>
+ </div>
+<button class="btn btn-common log-btn">Submit</button>
+</form>
+<ul class="form-links">
+<li class="text-center"><a href="/auth/signup">Don't have an account?</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<footer>
+
+    <section class="footer-Content" id="contact">
+        <div class="container">
+            <center><h5 style="align-content: center;color: white;font-size: 40px;margin-top: 5px">Contact</h5></center>
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-about">
+                        <h4 style="color: white">JOB BOARD</h4>
+                        <div class="social-links">
+                            <a href="#" class="twitter"><i class="fab fa-twitter-square" style='font-size:34px;color:white'>  </i>  </a>
+                            <a href="#" class="facebook"><i class="fab fa-facebook" style='font-size:34px;color:white'></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram" style='font-size:34px;color:white'></i></a>
+                            <a href="#" class="linkedin"><i class="fab fa-linkedin" style='font-size:34px;color:white'></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info">
+                        <div>
+
+                            <i class="material-icons">&#xe0c8;</i>Campus manouba <b>Manouba CP 2010, Tunis, Tunisie.</b>
+
+                        </div>
+
+                        <div>
+                            <i class="material-icons">&#xe0be;</i>
+                            job.board@isamm.tn
+                        </div>
+
+                        <div>
+                            <i class="fas fa-phone-alt"></i>
+                            +216 71 603 498
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="page-section">
+                    <div  style="width: 475px; height: 40px">
+                        <iframe allowfullscreen frameborder="10"  src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=campus+universitaire+la+manouba&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=42.224734,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Campus+Universitaire+de+La,+Manouba,+D%C3%A9l%C3%A9gation+de+La+Manouba,+La+Manouba+2010,+Tunisie&amp;ll=36.815353,10.062542&amp;spn=0.005231,0.010568&amp;t=m&amp;z=16&amp;output=embed" style="border: 10px none; width: 100%; pointer-events: none;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</footer>
+
+
+<a href="#" class="back-to-top">
+    <i class="material-icons">&#xe5d8;</i>
+</a>
+
+<div id="preloader">
+<div class="loader" id="loader-1"></div>
+</div>
+
+
+</body>
+</html>

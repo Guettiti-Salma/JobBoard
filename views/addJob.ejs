@@ -1,0 +1,310 @@
+<% include ./partials/head.ejs %>
+
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="inner-header">
+                    <h3>Post A Job</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<form class="" action="/jobs/addjob" method="post" enctype="multipart/form-data">
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-12 col-xs-12">
+                    <div class="post-job box">
+                        <h3 class="job-title">Post a new Job</h3>
+                        <form class="form-ad">
+                            <div class="form-group">
+                                <label class="control-label">Job Title</label>
+                                <input type="text" class="form-control" placeholder="Write job title" name="jobtitle">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label">Category</label>
+                                <div class="search-category-container">
+                                    <label class="styled-select">
+                                        <select class="dropdown-product selectpicker" name="category">
+                                            <option>All Categories</option>
+                                            <option>Finance</option>
+                                            <option>IT & Engineering</option>
+                                            <option>Education/Training</option>
+                                            <option>Art/Design</option>
+                                            <option>Sale/Markting</option>
+                                            <option>Healthcare</option>
+                                            <option>Science</option>
+                                            <option>Food Services</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">Job Description</label>
+                                <textarea type="text" class="form-control" name="jobdescription"> </textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">Experience</label>
+                                <input type="text" class="form-control" placeholder="Write Experience" name="experience">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">Education</label>
+                                <input type="text" class="form-control" placeholder="Write Education" name="education">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">Time</label> <br/>
+                                <div class="radio d-inline">
+                                    <input type="radio" class="" name="time" value="Full Time">  Full Time
+                                    <input type="radio" class="" name="time" value="Part Time">Part Time
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label">Closing Date <span>(optional)</span></label>
+                                <input type="date" class="form-control" placeholder="yyyy-mm-dd" name="date">
+                            </div>
+
+
+                            <div class="divider">
+                                <h3 class="job-title">Company Details</h3>
+                            </div>
+
+                            <% if (user.isAdmin()) {%>
+                            <div class="form-group">
+                                <label class="control-label">Company Name</label>
+                                <input type="text" class="form-control" placeholder="Enter the name of the company" name="companyname">
+                            </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Website <span>(optional)</span></label>
+                                    <input type="text" class="form-control" placeholder="http://" name="website">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Application email / URL</label>
+                                    <input type="text" class="form-control" placeholder="Enter an email address or website URL" name="email">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Location <span>(optional)</span></label>
+                                    <input type="text" class="form-control" placeholder="e.g.London" name="location">
+                                </div>
+                            <% } else { %>
+                            <div class="form-group">
+                                <label class="control-label">Company Name</label>
+                                <input type="text" class="form-control" placeholder="Enter the name of the company" name="companyname" value="<%= user.name %>" readonly>
+                            </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Website <span>(optional)</span></label>
+                                    <input type="text" class="form-control" placeholder="http://" name="website" value="<%= user.webSite %>" readonly>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Application email / URL</label>
+                                    <input type="text" class="form-control" placeholder="Enter an email address or website URL" name="email" value="<%= user.email %>" readonly>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Location <span>(optional)</span></label>
+                                    <input type="text" class="form-control" placeholder="e.g.London" name="location" value="<%= user.location %>" readonly>
+                                </div>
+                            <% }%>
+
+
+
+
+                            <div class="form-group">
+                                <label class="control-label">Choose image </label>
+                                <input type="file"  class="form-control" id="validatedCustomFile" name="img" required>
+                            </div>
+                            <button type="submit" class="btn btn-common"><i class="fa fa-database"></i> Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+
+
+
+
+
+
+
+<div id="browse-jobs" class="section bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="text-wrapper">
+                    <div>
+                        <h3>7,000+ Browse Jobs</h3>
+                        <p>Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 600,000 companies worldwide. The right job is out there.</p>
+                        <a class="btn btn-common" href="#">Search jobs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="img-thumb">
+                    <img class="img-fluid" src="/img/search.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<section class="how-it-works section" id="how-it-works">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>How It Works?</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="work-process">
+<span class="process-icon">
+<i class="fas fa-user-alt"></i>
+</span>
+                    <h4>Create an Account</h4>
+                    <p>Post a job to tell us about your project. We'll quickly match you with the right freelancers find place best.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="work-process step-2">
+<span class="process-icon">
+<i class="fa fa-search"></i>
+</span>
+                    <h4>Search Jobs</h4>
+                    <p>Post a job to tell us about your project. We'll quickly match you with the right freelancers find place best.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="work-process step-3">
+<span class="process-icon">
+<i class="fas fa-child"></i>
+</span>
+                    <h4>Apply</h4>
+                    <p>Post a job to tell us about your project. We'll quickly match you with the right freelancers find place best.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section bg-gray">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>About Us</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-8 col-xs-12">
+                <div class="download-wrapper">
+                    <div>
+                        <div class="download-text">
+                            <p><strong>Job Board </strong> offers  the flexibility, visibility and performance to find a job</p>
+
+
+                            <p> <strong> JobBoard.com </strong></p>
+                            <p>
+                                JobBoard.com is the ultimate tool for networking in the field of employment in Tunisia. Accessible to all, it brings together on a single innovative and efficient media,
+                                on the one hand, young graduates and quality job seekers, and on the other hand, companies and recruitment professionals.
+
+
+                                Particular attention is paid to supporting the Internet user: simplicity, saving time,
+
+                                This multi-criteria search engine has been thought out, designed and presented with the sole aim of optimizing your research whether you are a candidate or a recruiter. A multitude of advices, tips, and useful information will allow you to better manage your request.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4 col-xs-12">
+                <div class="download-thumb">
+                    <img class="img-fluid" src="/img/app.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+
+    <section class="footer-Content" id="contact">
+        <div class="container">
+            <center><h5 style="align-content: center;color: white;font-size: 40px;margin-top: 5px">Contact</h5></center>
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-about">
+                        <h4 style="color: white">JOB BOARD</h4>
+                        <div class="social-links">
+                            <a href="#" class="twitter"><i class="fab fa-twitter-square" style='font-size:34px;color:white'>  </i>  </a>
+                            <a href="#" class="facebook"><i class="fab fa-facebook" style='font-size:34px;color:white'></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram" style='font-size:34px;color:white'></i></a>
+                            <a href="#" class="linkedin"><i class="fab fa-linkedin" style='font-size:34px;color:white'></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info">
+                        <div>
+
+                            <i class="material-icons">&#xe0c8;</i>Campus manouba <b>Manouba CP 2010, Tunis, Tunisie.</b>
+
+                        </div>
+
+                        <div>
+                            <i class="material-icons">&#xe0be;</i>
+                            job.board@isamm.tn
+                        </div>
+
+                        <div>
+                            <i class="fas fa-phone-alt"></i>
+                            +216 71 603 498
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="page-section">
+                    <div  style="width: 475px; height: 40px">
+                        <iframe allowfullscreen frameborder="10"  src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=campus+universitaire+la+manouba&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=42.224734,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Campus+Universitaire+de+La,+Manouba,+D%C3%A9l%C3%A9gation+de+La+Manouba,+La+Manouba+2010,+Tunisie&amp;ll=36.815353,10.062542&amp;spn=0.005231,0.010568&amp;t=m&amp;z=16&amp;output=embed" style="border: 10px none; width: 100%; pointer-events: none;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</footer>
+
+
+<a href="#" class="back-to-top">
+    <i class="material-icons">&#xe5d8;</i>
+</a>
+
+<div id="preloader">
+    <div class="loader" id="loader-1"></div>
+</div>
+
+
+</body>
+</html>
+

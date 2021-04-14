@@ -1,0 +1,292 @@
+<% include ./partials/head.ejs %>
+
+
+<header id="home" class="hero-area">
+
+
+    <div class="container">
+        <div class="row space-100">
+            <div class="col-lg-7 col-md-12 col-xs-12">
+                <div class="contents">
+                    <h2 class="head-title">The Easiest Way To Get Your Dream Job .</h2>
+                    <p>You are welcome !</p>
+                    <div class="job-search-form">
+                        <form  method="post" action="/">
+                            <div class="row">
+
+                                <form>
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Job Title" name="search1">
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-xs-12">
+                                        <button type="submit" class="button"><i class="fa fa-search"> </i> </button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 col-xs-12">
+                <div class="intro-img">
+                    <img src="/img/intro.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="featured" class="section">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Featured Jobs</h2>
+        </div>
+
+
+        <div class="row">
+            <%for (var i= 0 ; i< list.length; i++) {%>
+            <div class="col-lg-4 col-md-6 col-xs-12">
+                <div class="job-featured">
+                    <div class="icon">
+                        <img src="/images/<%= list[i].imageName%>" style="width: 80px;height: 80px" alt="">
+                    </div>
+                    <div class="content">
+                        <h3><a href="/details/<%= list[i]._id %>"><%= list[i].jobtitle%></a></h3>
+                        <p class="brand"><%= list[i].companyname%></p>
+                        <div class="tags">
+                            <span><i class="fas fa-map-marker-alt"></i> <%= list[i].location%></span>
+                            <span><i class="fas fa-envelope-open"></i><%= list[i].email%></span>
+                        </div>
+                        <% if  (list[i].time === 'Full Time') { %>
+                        <span class="full-time">Full Time</span>
+
+                        <% }%>
+                        <% if  (list[i].time === 'Part Time') { %>
+                        <span class="part-time">Part Time</span>
+                        <% }%>
+
+                    </div>
+                </div>
+            </div>
+                <% }%>
+        </div>
+
+        </div>
+    </div>
+</section>
+
+
+<div id="browse-jobs" class="section bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="text-wrapper">
+                    <div>
+                        <h3>7,000+ Browse Jobs</h3>
+                        <p>Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 600,000 companies worldwide. The right job is out there.</p>
+                        <a class="btn btn-common" href="#">Search jobs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="img-thumb">
+                    <img class="img-fluid" src="/img/search.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<section class="how-it-works section" id="how-it-works">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>How It Works?</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="work-process">
+<span class="process-icon">
+<i class="fas fa-user-alt"></i>
+</span>
+                    <h4>Create an Account</h4>
+                    <p>Post a job to tell us about your project. We'll quickly match you with the right freelancers find place best.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="work-process step-2">
+<span class="process-icon">
+<i class="fa fa-search"></i>
+</span>
+                    <h4>Search Jobs</h4>
+                    <p>Post a job to tell us about your project. We'll quickly match you with the right freelancers find place best.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="work-process step-3">
+<span class="process-icon">
+<i class="fas fa-child"></i>
+</span>
+                    <h4>Apply</h4>
+                    <p>Post a job to tell us about your project. We'll quickly match you with the right freelancers find place best.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section bg-gray">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>About Us</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-8 col-xs-12">
+                <div class="download-wrapper">
+                    <div>
+                        <div class="download-text">
+                            <p><strong>Job Board </strong> offers  the flexibility, visibility and performance to find a job</p>
+
+
+                            <p> <strong> JobBoard.com </strong></p>
+                            <p>
+                                JobBoard.com is the ultimate tool for networking in the field of employment in Tunisia. Accessible to all, it brings together on a single innovative and efficient media,
+                                on the one hand, young graduates and quality job seekers, and on the other hand, companies and recruitment professionals.
+
+
+                             Particular attention is paid to supporting the Internet user: simplicity, saving time,
+
+                            This multi-criteria search engine has been thought out, designed and presented with the sole aim of optimizing your research whether you are a candidate or a recruiter. A multitude of advices, tips, and useful information will allow you to better manage your request.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4 col-xs-12">
+                <div class="download-thumb">
+                    <img class="img-fluid" src="/img/app.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="team" class="team section-bg">
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+            <h2>Team Developer</h2>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style=" margin-left: 30%;">
+                <div class="member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-img">
+                        <img src="/img/salma.jpg" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href="https://www.facebook.com/salma.quettiti"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/in/salma-guettiti/?fbclid=IwAR1p-u0dbQAXodU4XZnNhA9Df5bKhQIZmUASmQfcLvEpSrbSHVcLozUtBwE"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>Salma Geuttiti</h4>
+                        <span>Developer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-img">
+                        <img src="/img/nour.jpg" class="img-fluid" alt="" style="height: 250px;width: 240px">
+                        <div class="social">
+                            <a href="https://www.facebook.com/profile.php?id=100004311362366"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>Nour El Houda Boumenjel</h4>
+                        <span>Developer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><!-- End Team Section -->
+
+
+<footer>
+
+    <section class="footer-Content" id="contact">
+        <div class="container">
+
+            <center><h5 style="align-content: center;color: white;font-size: 40px;margin-top: 5px">Contact</h5></center>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-about">
+                        <h4 style="color: white">JOB BOARD</h4>
+                        <div class="social-links">
+                            <a href="#" class="twitter"><i class="fab fa-twitter-square" style='font-size:34px;color:white'>  </i>  </a>
+                            <a href="#" class="facebook"><i class="fab fa-facebook" style='font-size:34px;color:white'></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram" style='font-size:34px;color:white'></i></a>
+                            <a href="#" class="linkedin"><i class="fab fa-linkedin" style='font-size:34px;color:white'></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info">
+                        <div>
+
+                            <i class="material-icons">&#xe0c8;</i>Campus manouba <b>Manouba CP 2010, Tunis, Tunisie.</b>
+
+                        </div>
+
+                        <div>
+                            <i class="material-icons">&#xe0be;</i>
+                            job.board@isamm.tn
+                        </div>
+
+                        <div>
+                            <i class="fas fa-phone-alt"></i>
+                            +216 71 603 498
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="page-section">
+                    <div  style="width: 475px; height: 40px">
+                        <iframe allowfullscreen frameborder="10"  src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=campus+universitaire+la+manouba&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=42.224734,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Campus+Universitaire+de+La,+Manouba,+D%C3%A9l%C3%A9gation+de+La+Manouba,+La+Manouba+2010,+Tunisie&amp;ll=36.815353,10.062542&amp;spn=0.005231,0.010568&amp;t=m&amp;z=16&amp;output=embed" style="border: 10px none; width: 100%; pointer-events: none;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</footer>
+
+
+<a href="#" class="back-to-top">
+    <i class="material-icons">&#xe5d8;</i>
+</a>
+
+<div id="preloader">
+    <div class="loader" id="loader-1"></div>
+</div>
+
+
+</body>
+</html>
